@@ -1,0 +1,17 @@
+version: '3'
+services:
+    api-editor:
+        container_name: "genset-editor"
+        image: swaggerapi/swagger-editor
+        ports: 
+            - "10001:8080"
+            
+    api-ui:
+        container_name: "genset-docsui"
+        image: swaggerapi/swagger-ui
+        ports:
+            - "10002:8080"
+    
+    api-gen:
+        container_name: "genset-generator"
+        image: openapitools/openapi-generator-cli

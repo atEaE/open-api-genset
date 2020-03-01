@@ -7,7 +7,10 @@ genOpt_Val=$4
 outOpt_Key=$5
 outOpt_Val=$6
 
+# const
 help="openapi-gen.sh -i <import.file> -g <generate type> -o <output path>"
+basedir=/local
+outdir=/build
 
 # -i option check
 if [ -z ${inOpt_Key} ] || [ ${inOpt_Key} != "-i" ]; then
@@ -45,4 +48,8 @@ if [ -z ${genOpt_Val} ]; then
     exit 1
 fi
 
-docker run --rm -v "${PWD}:/dest" openapitools/openapi-generator-cli generate -i ${inOpt_Val} -g ${genOpt_Val} -o ${outOpt_Val}
+# optimaize path
+file_path=${basedir%/}/${inOpt_Val#/}
+out_path=${basedir%/}${outdir}/${outOpt_Val#/}
+
+docker run --rm -v ${PWD}:/local openapitools/openapi-generator-cli generate -i ${file_path} -g ${genOpt_Val} -o ${out_path}

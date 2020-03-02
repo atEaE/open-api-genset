@@ -2,6 +2,9 @@
 A toolset that supports the development of the OpenAPI.  
 This project is a toolset to easily create a development environment using "[OpenAPITools/openapi-generator](https://github.com/OpenAPITools/openapi-generator)" and "[swagger-api/swagger-editor](https://github.com/swagger-api/swagger-editor)".
 
+## Requirements
+- Docker
+
 ## Usage
 ### 1. Image build & running.
 ```sh
@@ -9,8 +12,14 @@ docker-compose up -d
 ```
 
 ### 2. API build.
+#### Linux or Unix
 ```sh
-bash openapi-gen.sh -i ./openapi.yaml -g go -o /local/go/out
+bash openapi-gen.sh -i openapi.yaml -g go -o go/out
+```
+
+#### Windows
+```bat
+openapi-gen.bat -i openapi.yaml -g go -o go/out
 ```
 
 ## Contributing

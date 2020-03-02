@@ -24,13 +24,13 @@ Any contributions you make are greatly appreciated.
 4. Push to the Branch(`git push origin feature/amazing_feature`).
 5. Open a Pull Request.
 
+## Thanks
+`OpenAPITools/openapi-generator` and `swagger-api/swagger-editor` are really great projects.  
+I would like to express my gratitude to the developers.
+
 ## Author
 - [github/atEaE](https://github.com/atEaE)
 - [twitter/atEaE](https://twitter.com/EaE2626)
-
-# Thanks
-`OpenAPITools/openapi-generator` and `swagger-api/swagger-editor` are really great projects.  
-I would like to express my gratitude to the developers.
 
 ## License
 MIT

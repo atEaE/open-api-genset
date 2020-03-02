@@ -8,7 +8,7 @@ outOpt_Key=$5
 outOpt_Val=$6
 
 # const
-help="openapi-gen.sh -i <import.file> -g <generate type> -o <output path>"
+help="openapi-gen.sh -i [import.file] -g [generate type] -o [output path]"
 basedir=/local
 outdir=/build
 
@@ -38,12 +38,12 @@ fi
 
 # -o option check
 if [ -z ${outOpt_Key} ] || [ ${outOpt_Key} != "-o" ]; then
-    echo "[EROR] Specify '-g' as the third argument."
+    echo "[EROR] Specify '-o' as the third argument."
     echo "      " ${help}
     exit 1
 fi
 if [ -z ${genOpt_Val} ]; then
-    echo "[EROR] No value has been set for the '-g' option."
+    echo "[EROR] No value has been set for the '-o' option."
     echo "      " ${help}
     exit 1
 fi

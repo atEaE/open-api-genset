@@ -4,6 +4,7 @@ This project is a toolset to easily create a development environment using "[Ope
 
 ## Requirements
 - Docker
+- docker-compose
 
 ## Usage
 ### 1. Image build & running.
